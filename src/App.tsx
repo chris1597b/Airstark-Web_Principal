@@ -116,10 +116,12 @@ export default function App() {
               <div className="font-display text-4xl text-accent">70%</div>
               <div className="text-xs text-slate-400 mt-1">Eventos adversos evitables</div>
             </div>
+            
             <div className="absolute -top-6 -right-6 bg-navy-mid border border-border-subtle rounded-xl p-5 z-20">
-              <div className="font-display text-4xl text-accent">S/ 5k</div>
-              <div className="text-xs text-slate-400 mt-1">Implementación inicial</div>
+              <div className="font-display text-4xl text-accent">+ 6 MLL</div>
+              <div className="text-xs text-slate-400 mt-1">Cirugias Anuales en el Perú</div>
             </div>
+            
           </FadeUp>
         </div>
       </section>
