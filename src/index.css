@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-syne: "Syne", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-navy: #0d1b2e;
+  --color-navy-mid: #122038;
+  --color-navy-light: #1a2f4a;
+  --color-accent: #4a9eff;
+  --color-accent-dim: rgba(74, 158, 255, 0.12);
+  --color-card: rgba(255, 255, 255, 0.04);
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+}
+
+body {
+  background-color: var(--color-navy);
+  color: white;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
