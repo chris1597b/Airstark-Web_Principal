@@ -53,7 +53,7 @@ export default function App() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-16 py-5 bg-navy/80 backdrop-blur-md border-b border-border-subtle">
         <a href="#" className="flex items-center gap-3 font-syne font-extrabold text-lg tracking-widest text-white">
-          <img src="src/img/logo-removebg-preview.png" alt="Airstark Logo" className="w-8 h-8 rounded-full border border-white/20" />
+          <img src="/img/logo-removebg-preview.png" alt="Airstark Logo" className="w-8 h-8 rounded-full border border-white/20" />
           AIRSTARk
         </a>
         <ul className="hidden md:flex gap-10">
@@ -109,7 +109,7 @@ export default function App() {
 
           <FadeUp delay={0.2} className="relative flex justify-center items-center mt-12 md:mt-0">
             <div className="relative rounded-2xl overflow-hidden border border-border-subtle shadow-[0_0_80px_rgba(74,158,255,0.08)] bg-navy-mid aspect-square w-full max-w-md flex items-center justify-center">
-              <img src="src/img/realidadaumentada.jpg" alt="Virtual Reality Surgery" className="w-full h-full object-cover opacity-100" />
+              <img src="/img/realidadaumentada.jpg" alt="Virtual Reality Surgery" className="w-full h-full object-cover opacity-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy to-transparent" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-navy-mid border border-border-subtle rounded-xl p-5 z-20">
@@ -147,7 +147,7 @@ export default function App() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <FadeUp>
             <div className="relative aspect-[4/5] bg-gradient-to-br from-navy-light to-navy-mid rounded-2xl border border-border-subtle overflow-hidden flex items-center justify-center">
-              <img src="src/img/cirugiarea.png" alt="Medical Training" className="w-full h-full object-cover" />
+              <img src="/img/cirugiarea.png" alt="Medical Training" className="w-full h-full object-cover" />
               <div className="absolute -right-6 top-10 bg-navy-mid border border-border-subtle rounded-xl p-5 backdrop-blur-md">
                 <div className="font-display text-3xl text-accent">15,000</div>
                 <div className="text-xs text-slate-400 mt-1">Déficit de especialistas</div>
@@ -251,7 +251,7 @@ export default function App() {
           </FadeUp>
 
           <FadeUp delay={0.1} className="aspect-[4/3] bg-gradient-to-br from-[#0a1628] to-navy-mid rounded-2xl border border-border-subtle overflow-hidden flex items-center justify-center">
-            <img src={`src/img/operacion.png`} alt={techTabs[activeTab].title} className="w-full h-full object-cover opacity-50 mix-blend-luminosity" />
+            <img src={`/img/operacion.png`} alt={techTabs[activeTab].title} className="w-full h-full object-cover opacity-50 mix-blend-luminosity" />
           </FadeUp>
 
           <FadeUp delay={0.2} className="pt-4">
@@ -355,13 +355,13 @@ export default function App() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { name: "Christopher Bardales", role: "CEO | Visionario & Estratega | Developer Digital Twins y Web + RA", img: "src/img/christopherb.png" },
-            { name: "Sting", role: "CTO | XR Engineer & 3D Tech Artist | Vision Computer", img: "src/img/sting.jpeg" },
-            { name: "Dr. José Ríos", role: "CMO Clínico | Cirugia General y Laparoscopia | Teacher Medical USS", img: "src/img/rios.jpeg" },
-            { name: "María", role: "COO | Ing. Empresarial y Sistemas | Emprendedora ", img: "src/img/maria.png" },
-            { name: "Dr. Andri", role: "Especialista en Patología Médica | IA Scientist | Digital & Computational Pathology", img: "src/img/andric.jpeg" },
-            { name: "William Carrasco", role: "Especialista Deep-Tech | Ing. de Sistemas | IA / IAX / ML / DL / VC", img: "src/img/1.png" },
-            { name: "Alejandro", role: "Ing. de Sistemas | Backend & Infraestructura | SRE ", img: "src/img/alejandro.jpeg" },
+            { name: "Christopher Bardales", role: "CEO | Visionario & Estratega | Developer Digital Twins y Web + RA", img: "/img/christopherb.png" },
+            { name: "Sting", role: "CTO | XR Engineer & 3D Tech Artist | Vision Computer", img: "/img/sting.jpeg" },
+            { name: "Dr. José Ríos", role: "CMO Clínico | Cirugia General y Laparoscopia | Teacher Medical USS", img: "/img/rios.jpeg" },
+            { name: "María", role: "COO | Ing. Empresarial y Sistemas | Emprendedora ", img: "/img/maria.png" },
+            { name: "Dr. Andri", role: "Especialista en Patología Médica | IA Scientist | Digital & Computational Pathology", img: "/img/andric.jpeg" },
+            { name: "William Carrasco", role: "Especialista Deep-Tech | Ing. de Sistemas | IA / IAX / ML / DL / VC", img: "/img/1.png" },
+            { name: "Alejandro", role: "Ing. de Sistemas | Backend & Infraestructura | SRE ", img: "/img/alejandro.jpeg" },
 
           ].map((member, i) => (
             <FadeUp key={i} delay={i * 0.1} className="group text-center">
@@ -406,7 +406,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 font-syne font-extrabold text-lg tracking-widest text-white mb-4">
-              <img src="src/img/logo-removebg-preview.png" alt="Airstark Logo" className="w-8 h-8 rounded-full border border-white/20" />
+              <img src="/img/logo-removebg-preview.png" alt="Airstark Logo" className="w-8 h-8 rounded-full border border-white/20" />
               AIRSTARK
             </div>
             <p className="text-xs text-slate-400 font-light leading-relaxed">
