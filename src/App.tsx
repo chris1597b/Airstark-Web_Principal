@@ -53,7 +53,7 @@ export default function App() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-16 py-5 bg-navy/80 backdrop-blur-md border-b border-border-subtle">
         <a href="#" className="flex items-center gap-3 font-syne font-extrabold text-lg tracking-widest text-white">
-          <img src="/img/logo-removebg-preview.png" alt="Airstark Logo" className="w-8 h-8 rounded-full border border-white/20" />
+          <img src="/img/favicon.png" alt="Airstark Logo" className="w-12 h-12 rounded-full border border-white/20" />
           AIRSTARk
         </a>
         <ul className="hidden md:flex gap-10">
@@ -420,7 +420,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 font-syne font-extrabold text-lg tracking-widest text-white mb-4">
-              <img src="/img/logo-removebg-preview.png" alt="Airstark Logo" className="w-8 h-8 rounded-full border border-white/20" />
+              <img src="/img/favicon.png" alt="Airstark Logo" className="w-12 h-12 rounded-full border border-white/20" />
               AIRSTARK
             </div>
             <p className="text-xs text-slate-400 font-light leading-relaxed">
