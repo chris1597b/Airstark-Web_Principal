@@ -20,6 +20,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState('');
+  const [videoTitle, setVideoTitle] = useState('');
 
   const techTabs = [
     {
@@ -204,7 +205,7 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="producto">
             {[
-              { phase: "Fase 1 | Pregrado", title: "Fundamentos", desc: "Plataforma Web. Exploración anatómica 3D, casos clínicos dinámicos y una IA tutora para pregrado.", link: "Ver MVP Educativo Web", url: "https://airstark.vercel.app/", whatsappLink: "https://chat.whatsapp.com/JOIkLjE0Sc05fARA0CC9gu" },
+              { phase: "Fase 1 | Pregrado", title: "Fundamentos", desc: "Plataforma Web. Exploración anatómica 3D, casos clínicos dinámicos y una IA tutora para pregrado.", link: "MVP FASE 1 WEB Y RA", url: "https://airstark.vercel.app/", videoUrl: "https://www.youtube.com/embed/ZgMCWxTF_kI", whatsappLink: "https://chat.whatsapp.com/JOIkLjE0Sc05fARA0CC9gu" },
               { phase: "Fase 2 | Postgrado y Residentes", title: "Destreza", desc: "Simulación XR. Entrenamiento inmersivo con gafas de realidad mixta en un entorno seguro.", link: "Ver MVP en Meta Quest 3", url: "https://mvp.airstark.com", videoUrl: "https://www.youtube.com/embed/_3spXKFtuH4", whatsappLink: "https://chat.whatsapp.com/Gp7OjOIOQiyJbLZbG9ES8Y" },
               { phase: "Fase 3 | Junta Medica Prequirurgica", title: "Estrategia", desc: "Planificación Preoperatoria. Gemelos Digitales 3D a partir de tomografías/resonancias.", link: "Conocer Más", url: "https://drive.google.com/file/d/17wuESekO1GzBY3grkQV0n0tFQZW17z8e/view?usp=sharing", whatsappLink: " https://chat.whatsapp.com/H2ecl8LfYvV05LSi0c2g8r" },
               { phase: "Fase 4 | Equipo Quirurgico", title: "Acción", desc: "Navegación Intraoperatoria AR. Superposición del gemelo digital sobre el paciente real en quirófano.", link: "Conocer Más", url: "https://drive.google.com/file/d/17wuESekO1GzBY3grkQV0n0tFQZW17z8e/view?usp=sharing", whatsappLink: "https://chat.whatsapp.com/KCuBLmj5LnAF3TY8HXZktv" }
@@ -216,7 +217,7 @@ export default function App() {
                 <p className="text-sm text-slate-400 font-light leading-relaxed mb-8">{service.desc}</p>
                 <div className="flex flex-col gap-4 mt-auto">
                   {service.videoUrl ? (
-                    <button onClick={() => { setVideoUrl(service.videoUrl); setIsModalOpen(true); }} className="inline-flex items-center gap-2 font-syne text-xs font-bold tracking-widest uppercase text-accent group-hover:gap-3 transition-all bg-transparent border-none cursor-pointer">
+                    <button onClick={() => { setVideoUrl(service.videoUrl); setVideoTitle(service.link); setIsModalOpen(true); }} className="inline-flex items-center gap-2 font-syne text-xs font-bold tracking-widest uppercase text-accent group-hover:gap-3 transition-all bg-transparent border-none cursor-pointer">
                       {service.link} <ArrowRight className="w-4 h-4" />
                     </button>
                   ) : (
@@ -470,7 +471,7 @@ export default function App() {
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
           <div className="bg-navy-mid border border-border-subtle rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-hidden">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="font-syne font-bold text-lg text-white">MVP en Meta Quest 3</h3>
+              <h3 className="font-syne font-bold text-lg text-white">{videoTitle}</h3>
               <button onClick={() => setIsModalOpen(false)} className="text-white hover:text-accent text-2xl">&times;</button>
             </div>
             <div className="aspect-video">
