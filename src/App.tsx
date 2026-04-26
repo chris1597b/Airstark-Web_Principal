@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ArrowRight, MessageCircle } from 'lucide-react';
 import { a } from 'motion/react-client';
 
 const FadeUp = ({ children, delay = 0, className = "", ...props }: { children: React.ReactNode, delay?: number, className?: string, [key: string]: any }) => (
@@ -204,25 +204,37 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="producto">
             {[
-              { phase: "Fase 1", title: "Fundamentos", desc: "Plataforma Web. Exploración anatómica 3D, casos clínicos dinámicos y una IA tutora para pregrado.", link: "Ver MVP Educativo Web", url: "https://airstark.vercel.app/" },
-              { phase: "Fase 2", title: "Destreza", desc: "Simulación XR. Entrenamiento inmersivo con gafas de realidad mixta en un entorno seguro.", link: "Ver MVP en Meta Quest 3", url: "https://mvp.airstark.com", videoUrl: "https://www.youtube.com/embed/_3spXKFtuH4" },
-              { phase: "Fase 3", title: "Estrategia", desc: "Planificación Preoperatoria. Gemelos Digitales 3D a partir de tomografías/resonancias.", link: "Conocer Más", url: "https://mvp.airstark.com" },
-              { phase: "Fase 4", title: "Acción", desc: "Navegación Intraoperatoria AR. Superposición del gemelo digital sobre el paciente real en quirófano.", link: "Conocer Más", url: "https://mvp.airstark.com" }
+              { phase: "Fase 1 | Pregrado", title: "Fundamentos", desc: "Plataforma Web. Exploración anatómica 3D, casos clínicos dinámicos y una IA tutora para pregrado.", link: "Ver MVP Educativo Web", url: "https://airstark.vercel.app/", whatsappLink: "https://chat.whatsapp.com/JOIkLjE0Sc05fARA0CC9gu" },
+              { phase: "Fase 2 | Postgrado y Residentes", title: "Destreza", desc: "Simulación XR. Entrenamiento inmersivo con gafas de realidad mixta en un entorno seguro.", link: "Ver MVP en Meta Quest 3", url: "https://mvp.airstark.com", videoUrl: "https://www.youtube.com/embed/_3spXKFtuH4", whatsappLink: "https://chat.whatsapp.com/Gp7OjOIOQiyJbLZbG9ES8Y" },
+              { phase: "Fase 3 | Junta Medica Prequirurgica", title: "Estrategia", desc: "Planificación Preoperatoria. Gemelos Digitales 3D a partir de tomografías/resonancias.", link: "Conocer Más", url: "https://drive.google.com/file/d/17wuESekO1GzBY3grkQV0n0tFQZW17z8e/view?usp=sharing", whatsappLink: " https://chat.whatsapp.com/H2ecl8LfYvV05LSi0c2g8r" },
+              { phase: "Fase 4 | Equipo Quirurgico", title: "Acción", desc: "Navegación Intraoperatoria AR. Superposición del gemelo digital sobre el paciente real en quirófano.", link: "Conocer Más", url: "https://drive.google.com/file/d/17wuESekO1GzBY3grkQV0n0tFQZW17z8e/view?usp=sharing", whatsappLink: "https://chat.whatsapp.com/KCuBLmj5LnAF3TY8HXZktv" }
             ].map((service, i) => (
               <FadeUp key={i} delay={i * 0.1} className="group relative bg-card border border-border-subtle rounded-2xl p-8 hover:-translate-y-2 hover:bg-accent-dim hover:border-accent/30 transition-all duration-300 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="font-syne text-xs font-bold text-accent mb-2">{service.phase}</div>
                 <h3 className="font-syne font-bold text-lg text-white mb-4">{service.title}</h3>
                 <p className="text-sm text-slate-400 font-light leading-relaxed mb-8">{service.desc}</p>
-                {service.videoUrl ? (
-                  <button onClick={() => { setVideoUrl(service.videoUrl); setIsModalOpen(true); }} className="inline-flex items-center gap-2 font-syne text-xs font-bold tracking-widest uppercase text-accent group-hover:gap-3 transition-all bg-transparent border-none cursor-pointer">
-                    {service.link} <ArrowRight className="w-4 h-4" />
-                  </button>
-                ) : (
-                  <a href={service.url || "#"} className="inline-flex items-center gap-2 font-syne text-xs font-bold tracking-widest uppercase text-accent group-hover:gap-3 transition-all">
-                    {service.link} <ArrowRight className="w-4 h-4" />
+                <div className="flex flex-col gap-4 mt-auto">
+                  {service.videoUrl ? (
+                    <button onClick={() => { setVideoUrl(service.videoUrl); setIsModalOpen(true); }} className="inline-flex items-center gap-2 font-syne text-xs font-bold tracking-widest uppercase text-accent group-hover:gap-3 transition-all bg-transparent border-none cursor-pointer">
+                      {service.link} <ArrowRight className="w-4 h-4" />
+                    </button>
+                  ) : (
+                    <a href={service.url || "#"} className="inline-flex items-center gap-2 font-syne text-xs font-bold tracking-widest uppercase text-accent group-hover:gap-3 transition-all">
+                      {service.link} <ArrowRight className="w-4 h-4" />
+                    </a>
+                  )}
+                  
+                  <a 
+                    href={service.whatsappLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors border border-[#25D366]/20 font-medium text-sm mt-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Únete a la comunidad
                   </a>
-                )}
+                </div>
               </FadeUp>
             ))}
           </div>
@@ -388,14 +400,16 @@ export default function App() {
           </div>
 
           <div className="relative z-10 flex flex-col gap-4 items-start md:items-end">
-            <a href="#" className="w-full md:w-auto text-center bg-white text-navy font-syne font-bold text-sm tracking-wider px-8 py-4 rounded-md hover:opacity-90 transition-all hover:-translate-y-0.5">
+            <a href="https://wa.me/51933790660?text=Hola%20,%20soy%20%5BTu%20Nombre%5D,%20inversionista.%20Estoy%20explorando%20oportunidades%20en%20healthtech%20y%20AIRSTARK%20llam%C3%B3%20mi%20atenci%C3%B3n.%20Me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20para%20profundizar%20en%20su%20propuesta%20y%20modelo%20de%20negocio.%20%C2%BFQu%C3%A9%20horario%20tienen%20disponible%20esta%20semana%3F
+" className="w-full md:w-auto text-center bg-white text-navy font-syne font-bold text-sm tracking-wider px-8 py-4 rounded-md hover:opacity-90 transition-all hover:-translate-y-0.5">
               AGENDAR REUNIÓN (INVERSORES)
             </a>
-            <a href="#" className="w-full md:w-auto text-center bg-transparent text-white border border-border-subtle font-syne font-bold text-sm tracking-wider px-8 py-4 rounded-md hover:border-white/30 transition-all">
+            <a href="https://wa.me/51933790660?text=Hola%20,%20soy%20representante%20de%20una%20instituci%C3%B3n%20y%20me%20interesa%20probar%20el%20piloto%20de%20AIRSTARK.%0A%0AMi%20nombre%20es:%20%5BNombre%5D%0AInstituci%C3%B3n:%20%5BNombre%20de%20la%20instituci%C3%B3n%5D%0ACargo:%20%5BOpcional%5D%0A%0AQuisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20y%20coordinar%20una%20demostraci%C3%B3n.%20%C2%BFPodemos%20agendar%20una%20reuni%C3%B3n%3F
+" className="w-full md:w-auto text-center bg-transparent text-white border border-border-subtle font-syne font-bold text-sm tracking-wider px-8 py-4 rounded-md hover:border-white/30 transition-all">
               SOLICITAR PILOTO INSTITUCIONAL
             </a>
             <p className="text-xs text-slate-400 mt-2 text-center md:text-right w-full md:w-auto">
-              Estudiantes/Médicos: <a href="#" className="text-accent hover:underline">Unirse a la Lista de Espera</a>
+              Estudiantes/Médicos: <a href="#solución" className="text-accent hover:underline">Unirse a la Lista de Espera</a>
             </p>
           </div>
         </FadeUp>
