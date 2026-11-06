@@ -117,12 +117,12 @@ export default function App() {
               <div className="font-display text-4xl text-accent">70%</div>
               <div className="text-xs text-slate-400 mt-1">Eventos adversos evitables</div>
             </div>
-            
+
             <div className="absolute -top-6 -right-6 bg-navy-mid border border-border-subtle rounded-xl p-5 z-20">
               <div className="font-display text-4xl text-accent">+ 6 MLL</div>
               <div className="text-xs text-slate-400 mt-1">Cirugias Anuales en el Perú</div>
             </div>
-            
+
           </FadeUp>
         </div>
       </section>
@@ -225,10 +225,10 @@ export default function App() {
                       {service.link} <ArrowRight className="w-4 h-4" />
                     </a>
                   )}
-                  
-                  <a 
-                    href={service.whatsappLink} 
-                    target="_blank" 
+
+                  <a
+                    href={service.whatsappLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors border border-[#25D366]/20 font-medium text-sm mt-2"
                   >
@@ -375,6 +375,7 @@ export default function App() {
             { name: "Dr. Andri", role: "Especialista en Patología Médica | IA Scientist | Digital & Computational Pathology", img: "/img/andric.jpeg" },
             { name: "William Carrasco", role: "Especialista Deep-Tech | Ing. de Sistemas | IA / IAX / ML / DL / VC", img: "/img/1.png" },
             { name: "Alejandro", role: "Ing. de Sistemas | Backend & Infraestructura | SRE ", img: "/img/alejandro.jpeg" },
+            { name: "Brayan", role: "Ing. de Sistemas | Especialista en Gestion de Proyectos | PM ", img: "/img/brayan.png" },
 
           ].map((member, i) => (
             <FadeUp key={i} delay={i * 0.1} className="group text-center">
