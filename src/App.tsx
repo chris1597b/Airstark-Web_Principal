@@ -375,7 +375,7 @@ export default function App() {
             { name: "Dr. Andri", role: "Especialista en Patología Médica | IA Scientist | Digital & Computational Pathology", img: "/img/andric.jpeg" },
             { name: "William Carrasco", role: "Especialista Deep-Tech | Ing. de Sistemas | IA / IAX / ML / DL / VC", img: "/img/1.png" },
             { name: "Alejandro", role: "Ing. de Sistemas | Backend & Infraestructura | SRE ", img: "/img/alejandro.jpeg" },
-            { name: "Brayan", role: "Ing. de Sistemas | Especialista en Gestion de Proyectos | PM ", img: "/img/brayan.png" },
+            { name: "Brayan", role: "Ing. de Sistemas | Especialista en Gestion de Proyectos | PM ", img: "/img/brayans.png" },
 
           ].map((member, i) => (
             <FadeUp key={i} delay={i * 0.1} className="group text-center">
